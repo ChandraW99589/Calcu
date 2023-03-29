@@ -2,45 +2,110 @@
 <html>
     <head>
         <style>
+            .grid-container {
+                display: grid;
+                grid-template-columns: 50px 50px 50px 50px;
+                gap: 3px;
+            }
+            
+            input {
+                grid-column: 1 / span 4;
+            }
+            
+            .red{
+                grid-column: 1 / span 2;
+            }
+
             button {
                 width: 100%;
+                border: none;
+                border-radius: 4px;
+            }
+
+            .red{
+                background-color: red;
+                color: white;
+            }
+
+            .biru{
+                background-color: blue;
+                color: white;
+            }
+            .oren{
+                background-color: orange;
+                color: black;
+            }
+            .ijo{
+                background-color: green;
+                color: white;
+            }
+            .item{
+                background-color: black;
+                color: white;
             }
         </style>
 
     </head>    
 <body>
+    <div class="grid-container">
+        <input type="text" name="display">
+        <button class="red">AC</button>
+        <button class="biru">C</button>
+        <button class="oren">*</button>
+        <button>7</button>
+        <button>8</button>
+        <button>9</button>
+        <button class="oren">/</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+        <button class="oren">+</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="oren">-</button>
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button class="oren">-</button>
+        <button class="item">+-</button>
+        <button>0</button>
+        <button class="item">.</button>
+        <button class="ijo">=</button>
+    </div>
+    <p></p>
     <table>
         <tr>
             <th colspan="4"><input type="text" name="display"></th>
         </tr>
         <tr>
-            <td colspan="2"><button>AC</button></td>
-            <td><button>C</button></td>
-            <td><button>*</button></td>
+            <td colspan="2"><button class="red">AC</button></td>
+            <td><button class="biru">C</button></td>
+            <td><button class="oren">*</button></td>
         </tr>
         <tr>
             <td><button>7</button></td>
             <td><button>8</button></td>
             <td><button>9</button></td>
-            <td><button>/</button></td>
+            <td><button class="oren">/</button></td>
         </tr>
         <tr>
             <td><button>4</button></td>
             <td><button>5</button></td>
             <td><button>6</button></td>
-            <td><button>+</button></td>
+            <td><button class="oren">+</button></td>
         </tr>
         <tr>
             <td><button>1</button></td>
             <td><button>2</button></td>
             <td><button>3</button></td>
-            <td><button>-</button></td>
+            <td><button class="oren">-</button></td>
         </tr>
         <tr>
-            <td><button>+-</button></td>
+            <td><button class="item">+-</button></td>
             <td><button>0</button></td>
-            <td><button>.</button></td>
-            <td><button>=</button></td>
+            <td><button class="item">.</button></td>
+            <td><button class="ijo">=</button></td>
         </tr>
     </table>
 </body>
