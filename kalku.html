@@ -31,7 +31,7 @@
                 background-color: blue;
                 color: white;
             }
-            .oren{
+            .operator{
                 background-color: orange;
                 color: black;
             }
@@ -48,33 +48,29 @@
     </head>    
 <body>
     <div class="grid-container">
-        <input type="text" name="display">
-        <button class="red">AC</button>
-        <button class="biru">C</button>
-        <button class="oren">*</button>
-        <button>7</button>
-        <button>8</button>
-        <button>9</button>
-        <button class="oren">/</button>
-        <button>4</button>
-        <button>5</button>
-        <button>6</button>
-        <button class="oren">+</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="oren">-</button>
-        <button>1</button>
-        <button>2</button>
-        <button>3</button>
-        <button class="oren">-</button>
+        <input type="text" name="display" id="CalCu" value="1">
+        <button id="clearall" class="red">AC</button>
+        <button id="clear" class="biru">C</button>
+        <button class="operator">*</button>
+        <button value="7" class="numbers">7</button>
+        <button value="8" class="numbers">8</button>
+        <button value="9" class="numbers">9</button>
+        <button class="operator">/</button>
+        <button value="4" class="numbers">4</button>
+        <button value="5" class="numbers">5</button>
+        <button value="6" class="numbers">6</button>
+        <button class="operator">+</button>
+        <button value="1" class="numbers">1</button>
+        <button value="2" class="numbers">2</button>
+        <button value="3" class="numbers">3</button>
+        <button class="operator">-</button>
         <button class="item">+-</button>
-        <button>0</button>
+        <button value="0" class="numbers">0</button>
         <button class="item">.</button>
         <button class="ijo">=</button>
     </div>
     <p></p>
-    <table>
+    <!-- <table>
         <tr>
             <th colspan="4"><input type="text" name="display"></th>
         </tr>
@@ -107,6 +103,29 @@
             <td><button class="item">.</button></td>
             <td><button class="ijo">=</button></td>
         </tr>
-    </table>
+    </table> -->
+
+    <script>
+        var inputLabel = document.getElementById("CalCu");
+        var numbers = document.getElementsByClassName("numbers");
+        var clearall = document.getElementById("clearall");
+        var clear = document.getElementById("clear");
+        for (let i = 0; i < numbers.length; i++){
+            numbers[i].addEventListener("click", function(){
+                var pushed = this.value;
+                inputLabel.value = inputLabel.value + pushed;
+            })
+        }
+
+        clearall.addEventListener("click", function(){
+            inputLabel.value = "";
+        })
+
+        clear.addEventListener("click", function(){
+            var maxlenght = inputLabel.value.length;
+            inputLabel.value = inputLabel.value.substr(0, maxlenght - 1)
+        })
+
+    </script>
 </body>
 </html>

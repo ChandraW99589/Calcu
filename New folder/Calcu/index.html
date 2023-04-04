@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="index.css">
+    </head>
+<body>
+    <script src="index.js"></script>
+    <h1 class="title">Welcome To CalCu</h1>
+    <p class="description">A website that you can use for counting a 
+        Area and Perimeter
+        of Triangel and Parallelogram
+    </p>
+    <!-- Navigation -->
+    <header>
+        <nav>
+            <div class="menu">
+                <button class="menu-triangel" id="hideP" onclick="hide()">
+                    Triangel</button>
+                <button class="menu-paralleogram" id="hideT" onclick="hide()">
+                    Parallelogram</button>
+            </div>
+        </nav>
+    </header>
+    <br>
+    <!-- Main Content -->
+    <main>
+        <!-- Triangel Area -->
+        <section id="triangelA">
+            <div class="card">
+                <div>
+                    <h2 class="triangel">Triangel Area</h2>
+                </div>
+                <img src="triangel.jpg" alt="triangel">
+                <div>
+                    <h5>Triangel's Area formulas</h6>
+                    <p>A = 1/2 * b * h</p>
+                </div>
+                <div>
+                <p>A = Area</p>
+                <p>b = base</p>
+                <p>h = height</p>
+                </div>
+                <div class="form-count">
+                    <h1 class="lets-count">Let's count Triangel Area</h1>
+                    <form action="" class="form-triangel">
+                        <input type="number" id="baseT" placeholder="Base value" >
+                        <input type="number" id="heightT" placeholder="Height value" >
+                        <h2 id="output1"></h2>
+                        <button type="button" class="button-triangel" id="button-triangelA" onclick="TriangelArea()">
+                            Count</button>
+                        <button type="reset" class="reset-triangel">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Triangel  Perimeter-->
+        <section id="triangelP">
+            <div class="card">
+                <div>
+                    <h2 class="triangel">Triangel Perimeter</h2>
+                </div>
+                <img src="triangel.jpg" alt="triangel">
+                <div>
+                    <h5>Triangel's Perimeter formulas</h6>
+                    <p>P = (a + b + c)</p>
+                </div>
+                <div>
+                <p>P = Perimeter</p>
+                <p>a = side a</p>
+                <p>b = side b</p>
+                <p>c = side c</p>
+                </div>
+                <div class="form-count">
+                    <h1 class="lets-count">Let's count Triangel Perimeter</h1>
+                    <form action="" class="form-triangel">
+                        <input type="number" id="sideaA" placeholder="Side A Value">
+                        <input type="number" id="sidebA" placeholder="Side B Value">
+                        <input type="number" id="sidecA" placeholder="Side C Value">
+                        <button type="submit" class="button-triangel">
+                            Count</button>
+                        <button type="reset" class="reset-triangel">Reset</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+    <!-- Parallelogram Area -->
+    <section id="parallelogramA">
+        <div class="card">
+            <div>
+                <h2 class="parallelogram">Parallelogram Area</h2>
+            </div>
+            <img src="parallelogram.jpg" alt="parallelogram">
+            <div>
+                <h5>Parallelogram's Area formulas</h6>
+                <p>A = b * h</p>
+            </div>
+            <div>
+            <p>A = Area</p>
+            <p>b = base</p>
+            <p>h = height</p>
+            </div>
+            <div class="form-count">
+                <h1 class="lets-count">Let's count Parallelogram Area</h1>
+                <form action="" class="form-parallelogram">
+                    <input type="number" id="baseP" placeholder="Base value">
+                    <input type="number" id="heightP" placeholder="Height value">
+                    <button type="submit" class="button-parallelogram">
+                        Count</button>
+                    <button type="reset" class="reset-parallelogram">Reset</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Triangel  Perimeter-->
+    <section id="parallelogramP">
+        <div class="card">
+            <div>
+                <h2 class="parallelogram">Parallelogram Perimeter</h2>
+            </div>
+            <img src="parallelogram.jpg" alt="parallelogram">
+            <div>
+                <h5>Parallelogram's Perimeter formulas</h6>
+                <p>P = (a + b + c + d)</p>
+            </div>
+            <div>
+            <p>P = Perimeter</p>
+            <p>a = side a</p>
+            <p>b = side b</p>
+            <p>c = side c</p>
+            <p>d = side d</p>
+            </div>
+            <div class="form-count">
+                <h1 class="lets-count">Let's count Parallelogram Perimeter</h1>
+                <form action="" class="form-parallelogram">
+                    <input type="number" id="sideaP" placeholder="Side A Value">
+                    <input type="number" id="sidebP" placeholder="Side B Value">
+                    <input type="number" id="sidecP" placeholder="Side C Value">
+                    <input type="number" id="sidedP" placeholder="Side D Value">
+                    <button type="submit" class="button-parallelogram">
+                        Count</button>
+                    <button type="reset" class="reset-parallelogram">Reset</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    </main>
+   
+
+    <!-- footer -->
+    <footer>
+
+    </footer>
+
+</body>
+</html>
