@@ -79,15 +79,12 @@ function resetPA(){
 function ParallelogramPerimeter(){
     const input1 = document.getElementById("sideaP");
     const input2 = document.getElementById("sidebP");
-    const input3 = document.getElementById("sidecP");
-    const input4 = document.getElementById("sidedP");
+    
 
     const a = parseInt(input1.value.trim());
     const b = parseInt(input2.value.trim());
-    const c = parseInt(input3.value.trim());
-    const d = parseInt(input4.value.trim());
-
-    let p = a + b + c + d
+    
+    let p = 2* (a + b)
 
     document.getElementById("output4").innerHTML = `The Result is ${p} cm`;
 }
@@ -95,12 +92,10 @@ function ParallelogramPerimeter(){
 function resetPP(){
     const a = document.getElementById("sideaP").value;
     const b = document.getElementById("sidebP").value;
-    const c = document.getElementById("sidecP").value;
-    const d = document.getElementById("sidecP").value;
+    
 
     a.value = ""
     b.value = ""
-    c.value = ""
-    d.value = ""
+    
     document.getElementById("output4").innerHTML = ` `;
 }
